@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Create a company with its registered office
+
+        let companyJson = {
+
+            id: 1,
+
+            name: 'Pratian',
+
+            registeredOffice: {
+
+                siteNo: '#184/185',
+
+                areaName: 'WhiteField',
+
+                city: 'Bangalore',
+
+                pinCode: 560066
+
+            }
+
+        };
+
+
+
+        // Display company and its registed office details
+
+        document.write("Company Id : " + companyJson.id);
+
+        document.write("<br>Company Name : " + companyJson.name);
+
+        document.write("<br>Registered Office Site No : " + companyJson.registeredOffice.siteNo);
+
+        document.write("<br>Registered Office Area No : " + companyJson.registeredOffice.areaName);
+
+        document.write("<br>Registered Office City : " + companyJson.registeredOffice.city);
+
+        document.write("<br>Registered Office Pin code : " + companyJson.registeredOffice.pinCode);
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Create a company with its registered office
+    
+        let companyJson = {
+            id: 1,
+    
+            name: 'Pratian',
+    
+            registeredOffice: {
+    
+                siteNo: '#184/185',
+    
+                areaName: 'WhiteField',
+    
+                city: 'Bangalore',
+    
+                pinCode: 560066
+    
+            },
+             products : [ 
+    
+                    { 
+    
+                        "id" : 1, 
+    
+                        "name" : 'SkillAssure FIT',  
+    
+                        "price" : 200000 
+    
+                    }, 
+    
+                    { 
+    
+                        "id" : 2, 
+    
+                        "name" : 'SkillAssure Discoveri',  
+    
+                        "price" : 150000 
+    
+                    } 
+    
+                ] ,
+            employees:[
+                    {
+                        "id":1,
+                        "name":"saritha",
+                        "designation":"QA",
+                        "dateOfJoin":"2017-10-01",
+                        "salary":30000
+
+                    },
+                    {
+                        "id":2,
+                        "name":"bindu",
+                        "designation":"BA",
+                        "dateOfJoin":"2017-10-01",
+                        "salary":50000
+
+                    }
+            ],
+
+            employeeWithPerson:[
+                    {
+                        "designation":"QA",
+                        "dateOfJoin":"2017-10-01",
+                        "salary":30000,
+                        person:{
+                            "id":1,
+                        "name":"saritha"
+                        }
+                      
+
+                    },
+                    {
+                        
+                        "designation":"BA",
+                        "dateOfJoin":"2017-10-01",
+                        "salary":50000,
+                        person:{
+                            "id":2,
+                        "name":"bindu"
+                        }
+
+                    }
+            ]
+    
+        };
+    
+    
+    
+        // Display company and its registed office details
+    
+        document.write("Company Id : " + companyJson.id);
+    
+        document.write("<br>Company Name : " + companyJson.name);
+    
+        document.write("<br>Registered Office Site No : " + companyJson.registeredOffice.siteNo);
+    
+        document.write("<br>Registered Office Area No : " + companyJson.registeredOffice.areaName);
+    
+        document.write("<br>Registered Office City : " + companyJson.registeredOffice.city);
+    
+        document.write("<br>Registered Office Pin code : " + companyJson.registeredOffice.pinCode);
+    
+         document.write("<hr>") 
+    
+            document.write("Products are : <hr>") 
+    
+     
+    
+            for(let i in companyJson.products) { 
+    
+                document.write("<br>Product Id : " + companyJson.products[i].id); 
+    
+                document.write("<br>Product Name : " + companyJson.products[i].name); 
+    
+                document.write("<br>Price : " + companyJson.products[i].price); 
+    
+                document.write("<hr>") ;
+    }
+            /*let product;
+            for(let i in companyJson.products)
+            {
+                product=companyJson.products[i];
+                console.log(product);
+                document.write("<br>Product Id : " +product.id); 
+    
+                document.write("<br>Product Name : " + product.name); 
+    
+                document.write("<br>Price : " + product.price); 
+    
+                document.write("<hr>")
+            }*/
+
+             document.write("<hr>") 
+    
+            document.write("Employees are : <hr>") 
+    
+            for(let i in companyJson.employees) { 
+    
+                document.write("<br>:Employee id: " + companyJson.employees[i].id); 
+    
+                document.write("<br>Employee Name : " + companyJson.employees[i].name); 
+    
+                document.write("<br>Designamtion : " + companyJson.employees[i].designation); 
+                
+             document.write("<br>Date of join : " + companyJson.employees[i].dateOfJoin); 
+            document.write("<br>Salary:  : " + companyJson.employees[i].salary); 
+                document.write("<hr>")
+            }
+    
+             document.write("<hr>") 
+    
+            document.write("Employees with person pbject : <hr>") 
+    
+            for(let i in companyJson.employeeWithPerson) { 
+    
+                 document.write("<br>Employee id: " + companyJson.employeeWithPerson[i].person.id); 
+    
+                document.write("<br>Employee Name : " + companyJson.employeeWithPerson[i].person.name); 
+    
+                 document.write("<br>Designamtion : " + companyJson.employeeWithPerson[i].designation); 
+                
+                 document.write("<br>Date of join : " + companyJson.employeeWithPerson[i].dateOfJoin); 
+                document.write("<br>Salary:  : " + companyJson.employeeWithPerson[i].salary); 
+               
+               
+                document.write("<hr>")
+            }
+    
+             
+    </script>
+</body>
+</html>
+
+
+

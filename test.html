@@ -1,0 +1,487 @@
+<html lang="en"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Document</title> 
+
+</head> 
+
+<body> 
+
+    <script> 
+
+        // Create a company with its registered office 
+
+        let companyJson = { 
+
+            "id" : 1, 
+
+            "name" : 'Pratian', 
+
+            "registeredOffice" : { 
+
+                "siteNo" : '#184/185', 
+
+                "areaName" : 'WhiteField', 
+
+                "city" : 'Bangalore', 
+
+                "pinCode" : 560066 
+
+            }, 
+
+            products : [ 
+
+                { 
+
+                    "id" : 1, 
+
+                    "name" : 'SkillAssure FIT',  
+
+                    "price" : 2000 
+
+                }, 
+
+                { 
+
+                    "id" : 2, 
+
+                    "name" : 'SkillAssure Discoveri',  
+
+                    "price" : 1500 
+
+                }, 
+
+                { 
+
+                    "id" : 3, 
+
+                    "name" : 'SkillAssure RTD',  
+
+                    "price" : 3000 
+
+                } 
+
+            ], 
+
+            employees : [ 
+
+                { 
+
+                    "id" : 1, 
+
+                    "name" : "Chandra Shekhar", 
+
+                    "designation" : "Senior Technology Specialist", 
+
+                    "joiningDate" : "2020:04:02", 
+
+                    "salary" : 15000.0 
+
+                }, 
+
+                { 
+
+                    "id" : 2, 
+
+                    "name" : "Nitesh", 
+
+                    "designation" : "Senior Software Developer", 
+
+                    "joiningDate" : "2020:04:02", 
+
+                    "salary" : 25000.0 
+
+                } 
+
+            ], 
+
+            customers : [ 
+
+                { 
+
+                    "id" : 1,  
+
+                    "name" : "OPTEAMIX", 
+
+                    "purchasedProducts" : [ { 
+
+                            "productId" : 1, 
+
+                            "productName" : 'SkillAssure FIT',  
+
+                            "price" : 2000, 
+
+                            "noOfAttendees" : 40 
+
+                        }, { 
+
+                            "productId" : 3, 
+
+                            "productName" : 'SkillAssure RTD',  
+
+                            "price" : 3000, 
+
+                            "noOfAttendees" : 20 
+
+                        }                 
+
+                    ] 
+
+                },  
+
+                { 
+
+                    "id" : 2,  
+
+                    "name" : "EUROFINS", 
+
+                    "purchasedProducts" : [ { 
+
+                            "productId" : 1, 
+
+                            "productName" : 'SkillAssure FIT',  
+
+                            "price" : 2000, 
+
+                            "noOfAttendees" : 300 
+
+                        }, { 
+
+                            "productId" : 3, 
+
+                            "productName" : 'SkillAssure RTD',  
+
+                            "price" : 3000, 
+
+                            "noOfAttendees" : 50 
+
+                        }                 
+
+                    ] 
+
+                },  
+
+                { 
+
+                    "id" : 3,  
+
+                    "name" : "AMADEUS", 
+
+                    "purchasedProducts" : [ { 
+
+                            "productId" : 1, 
+
+                            "productName" : 'SkillAssure FIT',  
+
+                            "price" : 2000, 
+
+                            "noOfAttendees" : 600 
+
+                        }                
+
+                    ] 
+
+                },   
+
+                { 
+
+                    "id" : 4,  
+
+                    "name" : "SIEMENS", 
+
+                    "purchasedProducts" : [ { 
+
+                            "productId" : 1, 
+
+                            "productName" : 'SkillAssure FIT',  
+
+                            "price" : 2000, 
+
+                            "noOfAttendees" : 500 
+
+                        }                 
+
+                    ] 
+
+                },  
+
+                { 
+
+                    "id" : 5,  
+
+                    "name" : "NESS TECHNOLOGIES", 
+
+                    "purchasedProducts" : [ { 
+
+                            "productId" : 1, 
+
+                            "productName" : 'SkillAssure FIT',  
+
+                            "price" : 2000, 
+
+                            "noOfAttendees" : 300 
+
+                        }                 
+
+                    ] 
+
+                },  
+
+                { 
+
+                    "id" : 6,  
+
+                    "name" : "MINDTREE", 
+
+                    "purchasedProducts" : [ { 
+
+                            "productId" : 1, 
+
+                            "productName" : 'SkillAssure FIT',  
+
+                            "price" : 2000, 
+
+                            "noOfAttendees" : 100 
+
+                        }, { 
+
+                            "productId" : 2, 
+
+                            "productName" : 'SkillAssure Discoveri',  
+
+                            "price" : 1500, 
+
+                            "noOfAttendees" : 500 
+
+                        }                 
+
+                    ] 
+
+                },   
+
+                { 
+
+                    "id" : 7,  
+
+                    "name" : "HCL", 
+
+                    "purchasedProducts" :[ { 
+
+                            "productId" : 1, 
+
+                            "productName" : 'SkillAssure FIT',  
+
+                            "price" : 2000, 
+
+                            "noOfAttendees" : 2000 
+
+                        }                 
+
+                    ] 
+
+                }, 
+
+                { 
+
+                    "id" : 8,  
+
+                    "name" : "CHARGEBEE", 
+
+                    "purchasedProducts" :[ { 
+
+                            "productId" : 3, 
+
+                            "productName" : 'SkillAssure RTD',  
+
+                            "price" : 3000, 
+
+                            "noOfAttendees" : 2 
+
+                        }                 
+
+                    ] 
+
+                },  
+
+                { 
+
+                    "id" : 9,  
+
+                    "name" : "ORACLE", 
+
+                    "purchasedProducts" :[ { 
+
+                            "productId" : 1, 
+
+                            "productName" : 'SkillAssure FIT',  
+
+                            "price" : 2000, 
+
+                            "noOfAttendees" : 240 
+
+                        }                 
+
+                    ]}, 
+
+                { 
+
+                    "id" : 10,  
+
+                    "name" : "SPIDERLOGIC", 
+
+                    "purchasedProducts" :[ { 
+
+                            "productId" : 1, 
+
+                            "productName" : 'SkillAssure FIT',  
+
+                            "price" : 2000, 
+
+                            "noOfAttendees" : 50 
+
+                        }, 
+
+                        { 
+
+                            "productId" : 2, 
+
+                            "productName" : 'SkillAssure Discoveri',  
+
+                            "price" : 1500, 
+
+                            "noOfAttendees" : 40 
+
+                        } , 
+
+                        { 
+
+                            "productId" : 3, 
+
+                            "productName" : 'SkillAssure RTD',  
+
+                            "price" : 3000, 
+
+                            "noOfAttendees" : 10 
+
+                        }                     
+
+                    ] 
+
+                } 
+
+            ] 
+
+        }; 
+
+ 
+
+        // Display company and its registed office details 
+
+        document.write("Company Id : " + companyJson.id); 
+
+        document.write("<br>Company Name : " + companyJson.name); 
+
+        document.write("<br>Registered Office Site No : "  
+
+            + companyJson.registeredOffice.siteNo); 
+
+        document.write("<br>Registered Office Area No : " + companyJson.registeredOffice.areaName); 
+
+        document.write("<br>Registered Office City : " + companyJson.registeredOffice.city); 
+
+        document.write("<br>Registered Office Pin code : " + companyJson.registeredOffice.pinCode); 
+
+        document.write("<hr>") 
+
+        document.write("Products are : <hr>") 
+
+ 
+
+        // Get all company products using for-of loop 
+
+        for(let element of companyJson.products) {  
+
+            console.log(element); 
+
+            document.write("<br>Product Id : " + element.id); 
+
+            document.write("<br>Product Name : " + element.name); 
+
+            document.write("<br>Price : " + element.price); 
+
+            document.write("<hr>") 
+
+        } 
+
+ 
+
+        let employee; 
+
+        // Get all company employees using for-in loop 
+
+        document.write("******************************************") 
+
+        document.write("<br>Employees are :-<br>"); 
+
+        document.write("<br>******************************************") 
+
+        for(let i in companyJson.employees) {  
+
+            employee = companyJson.employees[i]; 
+
+            document.write("<br>Employee Id : " + employee.id); 
+
+            document.write("<br>Name : " + employee.name); 
+
+            document.write("<br>-------------------------<br>") 
+
+        } 
+
+ 
+
+        // Get all company customers using for-of loop 
+
+        document.write("******************************************") 
+
+        document.write("<br>Customers are :-"); 
+
+        document.write("<br>******************************************") 
+
+        for(let customer of companyJson.customers) {  
+
+            document.write("<br>Customer Id : " + customer.id); 
+
+            document.write("<br>Name : " + customer.name); 
+
+            document.write("<br>=================================<br>Products bought<br>=================================<br>"); 
+
+            for(let product of customer.purchasedProducts) { 
+
+                document.write("<br>Product Id : " + product.productId); 
+
+                document.write("<br>Product Name : " + product.productName); 
+
+                document.write("<br>Price : " + product.price); 
+
+                document.write("<br>Number of Attendees : " + product.noOfAttendees); 
+
+                document.write("<br>^^^^^^^^^^^^^^^^^^^^^^^^") 
+
+            } 
+
+            document.write("<hr size='2' color='blue'>"); 
+
+ 
+
+        } 
+
+    </script> 
+
+</body> 
+
+</html> 
